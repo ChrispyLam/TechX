@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'DroidSerif';
+  src: url('./Assets/DroidSerif.ttf') /* Safari, Android, iOS */
+}
+
+body {
+	position: relative;
+	margin: 0;
+}
+
+#sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 5%;
+	background-color: #F2CC8F;
+}
+
+#main {
+	margin-left: 5%;
+	height: 100vh;
+	max-height: 100vh;
+	overflow-y: hidden;
+
+	background-color: #F4F1DE;
+}
+
+#center_text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	margin-left: 24px;
+
+	font-family: "Roboto", serif;
+}
+
+#center_text p {
+	margin: 0;
+}
+
+#title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 64px;
+	font-weight: bold;
+	color: #3D405B;
+
+	margin: 0;
+}
