@@ -1,9 +1,11 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Sun May 09 2021 02:14:23 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="607b8ab67c6777548dde9a34" data-wf-site="607b8ab57c67775d5dde9a33">
+<html data-wf-page="6088b5e8d5ea85b9fafc2399" data-wf-site="607b8ab57c67775d5dde9a33">
 <head>
   <meta charset="utf-8">
-  <title>TechX</title>
+  <title>About</title>
+  <meta content="About" property="og:title">
+  <meta content="About" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -17,16 +19,16 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="body">
-  <div class="home-page-container">
+  <div class="main-container">
     <div data-collapse="all" data-animation="over-left" data-duration="400" data-w-id="af3f716e-de2f-85f6-a1de-40d493a02655" role="banner" class="navbar w-nav">
       <div class="menu-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
       <nav role="navigation" class="nav-menu w-nav-menu">
         <div class="container-2 w-container">
-          <a href="index.html" aria-current="page" class="link-block w-inline-block w--current"><img src="images/thumbnail.png" loading="lazy" alt="TechX Word Art" class="image-2"></a>
+          <a href="index.html" class="link-block w-inline-block"><img src="images/thumbnail.png" loading="lazy" alt="TechX Word Art" class="image-2"></a>
         </div>
-        <a href="about.html" class="nav-link w-nav-link">About</a>
+        <a href="about.html" aria-current="page" class="nav-link w-nav-link w--current">About</a>
         <a href="courses.html" class="nav-link w-nav-link">Courses</a>
         <a href="contact-us.html" class="nav-link w-nav-link">Contact Us</a>
         <div class="div-block-4">
@@ -37,12 +39,13 @@
         </div>
       </nav>
     </div>
-    <div class="home-page"><img src="images/Flying-Cat.png" loading="lazy" data-w-id="23730436-d4b4-808d-425b-f47f466c00f7" sizes="100vw" id="flying-cat" srcset="images/Flying-Cat-p-500.png 500w, images/Flying-Cat.png 740w" alt="Cat hanging onto broom that follows the mouse. Unclickable" class="image-7"><img src="images/Home-Page-Background.png" loading="lazy" sizes="100vw" srcset="images/Home-Page-Background-p-500.png 500w, images/Home-Page-Background-p-800.png 800w, images/Home-Page-Background-p-1080.png 1080w, images/Home-Page-Background-p-1600.png 1600w, images/Home-Page-Background-p-2000.png 2000w, images/Home-Page-Background.png 2048w" alt="Background image of a cartoon python and dog in an arcane library" class="image-6">
-      <a id="cat-button" href="#" class="button-2 w-button">Toggle Flying Cat</a>
-      <div class="home-title">
-        <h1 class="heading">Tech<span class="text-span">X</span></h1><img src="placeholder.svg" loading="lazy" alt="">
-        <div class="text-block">Start, grow, or refine your <br>technical skills</div>
-        <a href="courses.html" target="_blank" class="button w-button">Registration open now! See Courses</a>
+    <div class="page">
+      <div class="course-page-title">
+        <h1 class="heading">About Tech<span class="text-span">X</span></h1>
+        <div class="text-block">Vision: <em>To build a community where anyone can start, grow, or refine their technical skills.<br></em></div>
+      </div>
+      <div class="section-2 w-clearfix"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-5">
+        <p class="about-paragraph">TechX is a CNH Circle K technology-education initiative to provide an environment in which all members can learn new skills and develop their technical experience. We are a team of individuals who have been involved in technology in Circle K International in some form or another. We are familiar with the existing professional development structure in CNH CKI that, while working for many years, does not lend itself nicely to learning practical, technical abilities. Therefore, we hope to kickstart a program that can provide those learning opportunities, beyond just workshops. This Summer 2021 will begin the first set of CNH Circle K technical courses, and it will only expand from there.</p>
       </div>
     </div>
   </div>
@@ -55,8 +58,7 @@
   button.addEventListener("click", event => {
     	console.log("clicked");
       let cat = document.getElementById("flying-cat");
-      let disp = cat.currentStyle ? cat.currentStyle["display"] : window.getComputedStyle ? window.getComputedStyle(cat, null).getPropertyValue("display") : null;
-      if (disp == "none") {
+      if (cat.style.display === "none") {
         cat.style.display = "inline-block";
       } else {
         cat.style.display = "none";
